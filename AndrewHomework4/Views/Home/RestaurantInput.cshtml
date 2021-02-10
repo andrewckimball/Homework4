@@ -1,0 +1,42 @@
+﻿@*
+    Input page that allows the user to interact with the form and input data
+*@
+@{
+    ViewBag.Title = "User Suggestions";
+}
+
+@model AndrewHomework4.Models.RestaurantSubmit
+
+<br />
+<div class="text-center">
+    <h4>Input the data related to your favorite restuarant below</h4>
+</div>
+<br />
+<br />
+
+
+<div class="container">
+    <form class="justify-content-center" asp-action="RestaurantInput" method="post">
+        <div class="form-group">
+            <label asp-for="InputName">Name:</label>
+            <input asp-for="InputName" />
+        </div><br />
+        <div class="form-group">
+            <label asp-for="InputRestaurantName">Restauarant Name:</label>
+            <input asp-for="InputRestaurantName" />
+        </div><br />
+        <div class="form-group">
+            <label asp-for="InputFavDish">Favorite Dish:</label>
+            <input asp-for="InputFavDish" />
+        </div><br />
+        <div class="form-group">
+            <label asp-for="InputPhone">Phone Number:</label>
+            <input asp-for="InputPhone" />
+        </div><br />
+        <button type="submit" class="btn btn-primary">Submit</button><br /><br /><br />
+        <div asp-validation-summary="All"></div>
+    </form>
+</div>
+
+
+

@@ -1,0 +1,35 @@
+﻿@*
+    Displays the results of the user's input
+*@
+@{
+    ViewBag.Title = "Restaurant List";
+}
+
+@model IEnumerable<AndrewHomework4.Models.RestaurantSubmit>
+
+<br />
+<div class="text-center">
+    <h4>Here are the individuals currently on the waitlist</h4><br />
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <th style="text-align:center">Name</th>
+                <th style="text-align:center">Restuarant</th>
+                <th style="text-align:center">Favorite Dish</th>
+                <th style="text-align:center">Phone Number</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (AndrewHomework4.Models.RestaurantSubmit x in Model)
+            {
+                <tr>
+                    <td align="center">@x.InputName</td>
+                    <td align="center">@x.InputRestaurantName</td>
+                    <td align="center">@x.InputFavDish</td>
+                    <td align="center">@x.InputPhone</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

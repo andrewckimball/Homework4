@@ -1,0 +1,18 @@
+﻿@*
+    Confirmation page after user submits the recommendations
+*@
+@{
+    ViewBag.Title = "Restaurant Confirmation";
+}
+
+@model AndrewHomework4.Models.RestaurantSubmit
+
+<br />
+<br />
+<div class="text-center">
+    <h4>The movie "@Model.InputRestaurantName" was recorded</h4>
+</div>
+<br />
+<div class="text-center">
+    <h4>Click <a asp-action="Results">here</a> to see the list of recorded movies</h4>
+</div>

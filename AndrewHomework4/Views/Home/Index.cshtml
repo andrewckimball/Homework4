@@ -1,0 +1,36 @@
+﻿@*
+    Home page that lists the 5 recommended provo restaurants
+*@
+
+@{
+    ViewBag.Title = "Welcome to the Top Provo Restaurants Site!";
+}
+
+@model IEnumerable<string>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Top Provo Restaurants</title>
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+    <br />
+    <header>
+        <h4 class="text-black text-center">Below is a list of the best restaurants in Provo</h4>
+    </header>
+    <br />
+
+    <div class="list-group">
+        <ul>
+            @foreach (string i in Model)
+            {
+                <li class="list-group-item">@i</li>
+            }
+        </ul>
+    </div>
+
+</body>
+</html>
+
+
