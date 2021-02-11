@@ -25,10 +25,10 @@
         <ul>
             @foreach (string i in Model)
             {
-                <li class="list-group-item">@i</li>
+                <li class="list-group-item">@Html.Raw(i)</li>
             }
         </ul>
-    </div>
+    </div>s
 
 </body>
 </html>

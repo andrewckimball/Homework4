@@ -33,8 +33,16 @@ namespace AndrewHomework4.Controllers
                 string dish = r.FavDish ?? "It's all tasty!";
 
                 //Concatinating the output that will be shown on the index.cshtml page
-                restaurantList.Add(string.Format(r.Rank + ":  " + r.Name + "  |  " + dish + "  |  " + r.Address +
-                    "  |  "  + r.Phone + "  |   " + r.WebLink));
+                if (r.WebLink != "Coming soon")  //if statement to check if there is not weblink...so I don't diplay an a tag that says "Coming soon"
+                {
+                    //Handles restarant links with appropriate a tags
+                    restaurantList.Add($"{r.Rank}: {r.Name} | {dish} | {r.Address} | {r.Phone} | <a href=\"{r.WebLink}\" target=\"_blank\">{r.WebLink}</a>");
+                }
+                //Handles the "Coming soon" Weblinks
+                else
+                {
+                    restaurantList.Add($"{r.Rank}: {r.Name} | {dish} | {r.Address} | {r.Phone} | {r.WebLink}");
+                }
             }
 
             return View(restaurantList);
